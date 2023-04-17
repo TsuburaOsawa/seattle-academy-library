@@ -56,13 +56,13 @@
                         <span>書籍名</span><span class="care care2">必須</span> <input type="text" name="title" value="${bookInfo.title}" autocomplete="off">
                     </div>
                     <div>
-                        <span>著者名</span><span class="care care2">必須</span> <input type="text" name="author" value="${bookInfo.title}" autocomplete="off">
+                        <span>著者名</span><span class="care care2">必須</span> <input type="text" name="author" value="${bookInfo.author}" autocomplete="off">
                     </div>
                     <div>
                         <span>出版社</span><span class="care care2">必須</span> <input type="text" name="publisher" value="${bookInfo.publisher}">
                     </div>
                     <div>
-                        <span>出版日</span><span class="care care2">必須</span> <input type="text" name="publishDate" value="${bookInfo.publisher}">
+                        <span>出版日</span><span class="care care2">必須</span> <input type="text" name="publishDate" value="${bookInfo.publishDate}">
                     </div>
                     <div>
                         <span>ISBN</span><span class="care care1">任意</span>
