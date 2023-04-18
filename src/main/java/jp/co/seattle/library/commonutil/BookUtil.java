@@ -98,12 +98,12 @@ public class BookUtil {
 	 */
 	private static boolean isEmptyBookInfo(BookDetailsInfo bookInfo) {
 		//TODO　タイトル、著者、出版社、出版日のどれか一つでもなかったらtrue（タスク４）
-		if (!(StringUtils.isEmpty(bookInfo.getTitle())) && !(StringUtils.isEmpty(bookInfo.getAuthor()))
-				&& !(StringUtils.isEmpty(bookInfo.getPublisher()))
-				&& !(StringUtils.isEmpty(bookInfo.getPublishDate()))) {
-			return false;
-		} else {
+		if ((StringUtils.isEmpty(bookInfo.getTitle())) || (StringUtils.isEmpty(bookInfo.getAuthor()))
+				|| (StringUtils.isEmpty(bookInfo.getPublisher()))
+				|| (StringUtils.isEmpty(bookInfo.getPublishDate()))) {
 			return true;
+		} else {
+			return false;
 		}
 	}//StringUtils.isEmpty(bookInfo.getTitle());
 }
