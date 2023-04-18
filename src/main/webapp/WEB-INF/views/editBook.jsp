@@ -65,22 +65,10 @@
                         <span>出版日</span><span class="care care2">必須</span> <input type="text" name="publishDate" value="${bookInfo.publishDate}">
                     </div>
                     <div>
-                        <span>ISBN</span><span class="care care1">任意</span>
-                        <c:if test="${!empty bookInfo}">
-                            <input type="text" name="isbn" value="${bookInfo.isbn}">
-                        </c:if>
-                        <c:if test="${empty bookInfo}">
-                            <input type="text" name="isbn">
-                        </c:if>
+                        <span>ISBN</span><span class="care care1">任意</span> <input type="text" name="isbn" value="${bookInfo.isbn}">
                     </div>
                     <div>
-                        <span>説明文</span><span class="care care1">任意</span>
-                        <c:if test="${!empty bookInfo}">
-                            <input type="text" name="description" value="${bookInfo.description}">
-                        </c:if>
-                        <c:if test="${empty bookInfo}">
-                            <input type="text" name="description">
-                        </c:if>
+                        <span>説明文</span><span class="care care1">任意</span> <input type="text" name="description" value="${bookInfo.description}">
                     </div>
                     <input type="hidden" id="bookId" name="bookId" value="${bookInfo.bookId}">
                 </div>
