@@ -30,8 +30,11 @@ public class UsersService {
 		// SQL生成
 		String sql = "INSERT INTO users (email, password,reg_date,upd_date) VALUES ('" + userInfo.getEmail() + "','"
 				+ userInfo.getPassword() + "',now(),now()" + ")";
+		//String sql = "INSERT INTO users (email, password,reg_date,upd_date) VALUES ('abc@co.jp', 'aiueo12345',now(),now())";
+		//char型と区別して’シングルクォーテーション
 
 		jdbcTemplate.update(sql);
+		//JavaとDatabaseを繋ぐ
 	}
 
 	/**
@@ -51,5 +54,8 @@ public class UsersService {
 			return null;
 		}
 	}
+
+	public usersService updateAcount(String users)
+		String sql = UPDATE users SET 
 
 }
