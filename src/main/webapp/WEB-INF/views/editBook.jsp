@@ -53,6 +53,14 @@
                                 </c:forEach>
                             </div>
                         </c:if>
+                        <div>
+                            <c:if test="${!empty successMessage}">
+                                <div class="error">${successMessage}</div>
+                            </c:if>
+                            <c:if test="${!empty errorMessage}">
+                                <div class="error">${errorMessage}</div>
+                            </c:if>
+                        </div>
                         <span>書籍名</span><span class="care care2">必須</span> <input type="text" name="title" value="${bookInfo.title}" autocomplete="off">
                     </div>
                     <div>
@@ -70,16 +78,26 @@
                     <div>
                         <span>説明文</span><span class="care care1">任意</span> <input type="text" name="description" value="${bookInfo.description}">
                     </div>
+                    <div>
+                        <span>お気に入り登録:１ 非登録:０</span><span class="care care1">任意</span> <input type="text" name="favorite" value="${bookInfo.favorite}">
+                    </div>
+                    <div>
+                        <span>ジャンル</span><span class="care care1">任意</span> <input type="text" name="genre" value="${bookInfo.genre}">
+                    </div>
                     <input type="hidden" id="bookId" name="bookId" value="${bookInfo.bookId}">
                 </div>
             </div>
             <div class="bookBtn_box">
                 <button type="submit" id="add-btn" class="btn_updateBook">更新</button>
-        </form>
-        <form method="post" action="deleteBook" name="delete">
-            <input type="hidden" id="bookId" name="bookId" value="${bookInfo.bookId}">
-            <button type="submit" id="delete-btn" class="btn_deleteBook">削除</button>
-        </form>
+      </form>
+            <form method="post" action="deleteBook" name="delete">
+                <input type="hidden" name="bookId" value="${bookInfo.bookId}">
+                <button type="submit" id="delete-btn" class="btn_deleteBook">削除</button>
+            </form>
+            <form method="post" action="outputBook" name="output">
+                <input type="hidden" name="bookId" value="${bookInfo.bookId}">
+                <button types="submit" id="outputBook" class="btn_outputBook">書籍出力</button>
+            </form>
         </div>
     </main>
 </body>

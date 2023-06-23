@@ -1,0 +1,646 @@
+@charset "UTF-8";
+
+input {
+	outline: 0;
+	border: 0;
+	background: transparent;
+}
+
+.icon {
+	width: 120px;
+	margin: 5px 0 0 10px;
+}
+
+.icon2 {
+	width: 160px;
+}
+
+.icon1 {
+	width: 34px;
+	vertical-align: top;
+	margin-top: 28px;
+}
+
+.top-right {
+	float: right;
+	text-align: right;
+	height: 90px;
+	z-index: 10;
+	position: relative;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.top-right li {
+	display: inline-block;
+	font-size: 16px;
+	list-style: none;
+	width: 80px;
+	margin: 35px 30px 0 0;
+}
+
+.body {
+	width: 100%;
+	text-align: center;
+}
+
+.body form {
+	border: none;
+	display: inline-block;
+}
+
+.care {
+	padding: 0 10px;
+	margin-left: 15px;
+	display: inline-block;
+	font-size: 10px;
+}
+
+.care1 {
+	background-color: gray;
+	color: white;
+}
+
+.care2 {
+	background-color: red;
+	color: white;
+}
+
+
+/* ここから追加 */
+.search_box {
+	position: relative;
+	margin-left: -5px;
+}
+
+.search1 {
+	border-radius: 20px 0 0 20px;
+	font-size: 15px;
+	width: 325px;
+	padding: 4px 10px;
+	border: 1px solid #2196f3;
+}
+
+.search1:hover {
+	box-shadow: 0 0 2px black;
+}
+
+.search_box:after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f002";
+	position: absolute;
+	top: 7px;
+	right: 12px;
+	color: white;
+	pointer-events: none;
+}
+
+.booklist {
+	margin-top: 68px;
+}
+
+.books {
+	display: inline-block;
+	margin-right: 16.5px;
+	margin-bottom: 20px;
+	padding: 17px 22px 22px 22px;
+	line-height: 1.5;
+	height: 365px;
+	background-color: #FFF5EE;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: inset 0 2px 0 rgba(255, 255, 255, .2), 0 2px 2px rgba(0, 0, 0, .2);
+}
+
+.book_thumnail {
+	position: relative;
+	width: 165px;
+	height: 210px;
+}
+
+img.book_noimg,
+img.book_img {
+	width: 165px;
+	height: 210px;
+	bottom: 10px;
+}
+
+img.book_img {
+	width: 165px;
+	height: 210px;
+	left: 20px;
+}
+
+.book_thumnail a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.book_title {
+	font-size: 16px;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+.book_author {
+	font-size: 13px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.book_publisher,
+.book_publish_date {
+	font-size: 12px;
+	text-align: center;
+}
+
+a.btn_add_book,
+a.btn_favo_book,
+a.btn_bulk_book,
+button.btn_addBook,
+button.btn_editBook,
+button.btn_deleteBook,
+button.btn_rentBook,
+button.btn_returnBook,
+button.btn_updateBook,
+button.btn_bulkRegist {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.5;
+	text-align: center;
+	padding: 8px 12px;
+	margin: 10px 5px 0;
+	background-color: #DB7093;
+	border-bottom: solid 2px rgba(0, 0, 0, .2);
+	box-shadow: inset 0 2px 0 rgba(255, 255, 255, .2), 0 2px 2px rgba(0, 0, 0, .2);
+	color: #fff;
+	border-radius: 5px 5px 5px 5px;
+}
+input[type="button"]{
+
+ background-color: #f08080; /* ボタンの背景色 */
+  color: #949494; /* ボタンのテキスト色 */
+  border: none; /* ボタンのボーダーなし */
+  padding: 10px 20px; /* ボタンの余白 */
+  font-size: 16px; /* ボタンのフォントサイズ */
+  border-radius: 5px; /* ボタンの角丸 */
+  text-shadow: none;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, .2), 0 2px 2px rgba(0, 0, 0, .2); /* ボタンの影 */
+  cursor: pointer; /* マウスを乗せたときにカーソルをポインターに変更 */
+  margin-left:1000px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+   color: #f08080;
+    background-color: #f08080;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s; /* マウスを乗せたときのボタンの背景色 */
+}
+
+.btn_adult_book{
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.5;
+	text-align: center;
+	padding: 8px 12px;
+	margin: 10px 5px 0;
+	background-color: #f08080;
+	border: none;
+	border-bottom: solid 2px rgba(0, 0, 0, .2);
+	box-shadow: inset 0 2px 0 rgba(255, 255, 255, .2), 0 2px 2px rgba(0, 0, 0, .2);
+	color: #fff;
+	border-radius: 5px 5px 5px 5px;
+	position: absolute;
+	left: 370;
+	top: 117.5px;
+}
+
+a.shelf_book{
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.5;
+	text-align: center;
+	padding: 8px 12px;
+	margin: 10px 5px 0;
+	background-color: #f08080;
+	border: none;
+	border-bottom: solid 2px rgba(0, 0, 0, .2);
+	box-shadow: inset 0 2px 0 rgba(255, 255, 255, .2), 0 2px 2px rgba(0, 0, 0, .2);
+	color: #fff;
+	border-radius: 5px 5px 5px 5px;
+}
+
+
+a.btn_bulk_book {
+	background-color: #98fb98;
+}
+
+button.btn_editBook {
+	background-color: #9ec34b;
+}
+
+button.btn_deleteBook {
+	background-color: #e94047;
+}
+
+button.btn_rentBook {
+	background-color: #FF9933;
+}
+
+button.btn_returnBook,
+button.btn_updateBook {
+	background-color: #7db4e6;
+}
+
+button.btn_bulkRegist {
+	background-color: #FF9966;
+}
+
+a:hover,
+button:hover {
+	opacity: 0.5;
+}
+
+/* ここからaddbook */
+.add_book_content,
+.detail_book_content {
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.add_book_content .content_right,
+.detail_book_content .content_right {
+	margin-left: 20px;
+}
+
+.content_right input,
+.detail_book_content .content_right p {
+	border-bottom: 1px solid #cccccc;
+	margin: 5px 0 15px;
+	font-size: 15px;
+}
+
+.detail_book_content .content_left {
+	width: 250px;
+}
+
+.detail_book_content .content_right {
+	width: 275px;
+}
+
+.detail_book_content .content_right p {
+	padding: 5px 0;
+	width: 99.2%;
+	text-indent: 1em;
+	vertical-align: middle;
+
+}
+
+.content_right input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+}
+
+.bookBtn_box {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.edtDelBookBtn_box {
+	display: flex;
+	justify-content: center;
+}
+
+.button.btn_bulkRegist {
+	display: flex;
+	justify-content: center;
+}
+
+
+button.btn_addBook,
+button.btn_editBook,
+button.btn_deleteBook,
+button.btn_rentBook,
+button.btn_updateBook,
+button.btn_returnBook,
+button.btn_bulkRegist {
+	border-radius: 30px;
+	width: 120px;
+	margin-top: 20px;
+	border: none;
+	border-bottom: solid 2px rgba(0, 0, 0, .2);
+}
+
+button.btn_addBook:focus,
+button.btn_editBook:focus,
+button.btn_deleteBook:focus,
+button.btn_rentBook:focus,
+button.btn_returnBook:focus,
+button.btn_updateBook:focus,
+button.btn_bulkRegist:focus {
+	outline: none;
+}
+
+button.btn_addBook:hover,
+button.btn_editBook:hover,
+button.btn_deleteBook:hover,
+button.btn_rentBook:hover,
+button.btn_returnBook:hover,
+button.btn_updateBook:hover,
+button.btn_bulkRegist:hover {
+	cursor: pointer;
+}
+
+hr.border_add {
+	width: 850px;
+	margin: revert;
+}
+
+.uploadButton {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+	background: #099;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	line-height: 30px;
+	width: 120px;
+	cursor: pointer;
+}
+
+.uploadButton:hover {
+	background: #0aa;
+}
+
+.uploadButton input[type=file] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 120px;
+	height: 100%;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.uploadValue {
+	display: none;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 3px;
+	padding: 3px;
+	color: #ffffff;
+}
+
+.bulk_form {
+	text-align: center;
+}
+
+.bulk_form h2 {
+	margin-bottom: 20px
+}
+
+.bulk_form .caution {
+	text-align: center;
+	margin: 30px auto;
+}
+
+.bulk_form .caution p {
+	color: #fa8072;
+}
+
+/*検索ボックス*/
+#sbox {
+	position: absolute;
+	/*フォームの絶対位置*/
+	left: 500;
+	top: 20;
+	outline: 0;
+	/*クリック時の青い枠線消す*/
+	height: 30px;
+	/*検索ボックスの高さ*/
+	width: 270px;
+	padding: 0 10px;
+	/*テキスト位置調整*/
+	border-radius: 5px 5px 5px 5px;
+	/*検索ボックスの角を丸める*/
+	background: #F5F5F5;
+	/*検索ボックスの背景カラー*/
+}
+
+/*検索ボタン*/
+#sbtn {
+	width: 35px;
+	/*検索ボタンの横幅*/
+	height: 30px;
+	/*検索ボタンの縦幅*/
+	position: absolute;
+	/*検索ボタンの絶対位置*/
+	left: 775px;
+	/*検索ボタンの位置調整*/
+	top: 20;
+	border-radius: 5px 5px 5px 5px;
+	/*検索ボタンの角を丸める*/
+	border: none;
+	/*検索ボタンの枠線を消す*/
+}
+
+#nofbtn {
+	position: absolute;
+	/*ボタンの絶対位置*/
+	border-radius: 0 2px 2px 0;
+	/*ボタンの角を丸める*/
+	background: #d3d3d3;
+	/*タンの背景カラー*/
+	border: none;
+	/*ボタンの枠線を消す*/
+	color: #696969;
+	/*ボタンのテキストカラー*/
+	font-weight: bold;
+	/*ボタンのテキスト太字*/
+	font-size: 16px;
+	/*ボタンのフォントサイズ*/
+	padding: 0 10px;
+	/*テキスト位置調整*/
+	border-radius: 5px 5px 5px 5px;
+	margin-top: 10px;
+	margin-left: 19px;
+}
+
+/*お気に入りボタンマウスオーバー時*/
+#nofbtn:hover {
+	color: #c71585;
+	/*ボタンマウスオーバー時のフォントカラー*/
+}
+
+/*お気に入りボタン*/
+#fbtn {
+	position: absolute;
+	/*ボタンの絶対位置*/
+	border-radius: 0 2px 2px 0;
+	/*ボタンの角を丸める*/
+	background: #ffc0cb;
+	/*タンの背景カラー*/
+	border: none;
+	/*ボタンの枠線を消す*/
+	color: #c71585;
+	/*ボタンのテキストカラー*/
+	font-weight: bold;
+	/*ボタンのテキスト太字*/
+	font-size: 16px;
+	/*ボタンのフォントサイズ*/
+	padding: 0 10px;
+	/*テキスト位置調整*/
+	border-radius: 5px 5px 5px 5px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+/*お気に入りボタンマウスオーバー時*/
+#fbtn:hover {
+	color: #696969;
+}
+
+#checkButton {
+	position: absolute;
+	left: 1240;
+	top: 20px;
+}
+
+#check {
+	font-size: 5px;
+}
+
+/*セレクトボックス*/
+.sebox{
+	position: relative;
+}
+.selectbox-001 {
+    position:absolute;
+    top:10px;
+    left:1080;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, .2), 0 2px 2px rgba(0, 0, 0, .2);
+}
+#genre {
+	border: none;
+	position: absolute;
+	/*フォームの絶対位置*/
+	left: 1315;
+	top:10px;
+	outline: 0;
+	/*クリック時の青い枠線消す*/
+	height: 45px;
+	/*検索ボックスの高さ*/
+	width: 50px;
+	padding: 0 5px;
+	/*テキスト位置調整*/
+	border-radius: 5px 5px 5px 5px;
+	color:#808080;
+	/*検索ボックスの角を丸める*/
+	background: #F5F5F5;
+	/*検索ボックスの背景カラー*/
+	box-shadow: inset 0 2px 0 rgba(255, 255, 255, .2), 0 2px 2px rgba(0, 0, 0, .2);
+}
+genre:hover {
+   color: #f9f1f1;
+    background-color: #f9f1f1;
+    border: 2px solid #f9f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s; /* マウスを乗せたときのボタンの背景色 */
+}
+
+.selectbox-001::before,
+.selectbox-001::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+}
+
+.selectbox-001::before {
+    display: inline-block;
+    right: 0;
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 0 3px 3px 0;
+    background-color: #DB7093;
+}
+
+.selectbox-001::after {
+    position: absolute;
+    top: 50%;
+    right: 1.4em;
+    transform: translate(50%, -50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+}
+
+.selectbox-001 select {
+    appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .4em 3.6em .4em .8em;
+    border: none;
+    border-radius: 3px;
+    background-color: #f9f1f1;
+    color: #808080;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.selectbox-001 select:focus {
+    outline: 2px solid #DB7093;
+}
+
+
+/*モーダル*/
+
+#ageConfirmationModal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 5px 5px 5px 5px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-title{
+	font-size: bold;
+	margin-bottom: 5px;
+}
+
+#disapear {
+	position: absolute;
+	left: 260;
+	top: 10px;
+}
+
+.modal-button {
+    margin-top: 10px;
+}

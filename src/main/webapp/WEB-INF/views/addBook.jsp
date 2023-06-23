@@ -101,6 +101,24 @@
                             <input type="text" name="description">
                         </c:if>
                     </div>
+                    <div>
+                        <span>お気に入り登録:１  非登録:０</span><span class="care care1">任意</span>
+                        <c:if test="${!empty bookInfo}">
+                            <input type="text" name="favorite" value="${bookInfo.favorite}">
+                        </c:if>
+                        <c:if test="${empty bookInfo}">
+                            <input type="text" name="favorite">
+                        </c:if>
+                    </div>
+                    <div>
+                        <span>ジャンル</span><span class="care care1">任意</span>
+                        <c:if test="${!empty bookInfo}">
+                            <input type="text" name="genre" value="${bookInfo.genre}">
+                        </c:if>
+                        <c:if test="${empty bookInfo}">
+                            <input type="text" name="genre">
+                        </c:if>
+                    </div>
                     <input type="hidden" id="bookId" name="bookId" value="${bookInfo.bookId}">
                 </div>
             </div>

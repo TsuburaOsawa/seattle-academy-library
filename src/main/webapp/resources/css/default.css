@@ -217,7 +217,7 @@ header > .right > ul{
     display:flex;
 }
 header > .right > ul > li{
-    margin-right: 15px;
+    margin-right: 70px;
 }
 /* 共通ヘッダー（右）アンカー */
 header > .right a {
@@ -270,7 +270,7 @@ ul {
 h1 {
   padding: 0.4em 0.5em;
   color: #707070;
-  border-left: solid 5px #7db4e6;
+  border-left: solid 5px #ffc0cb;
 }
 .error_msg {
     color: red;
