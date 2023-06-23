@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import jp.co.seattle.library.service.BooksService;
+import jp.co.seattle.library.service.DeleteService;
 
 @Controller
 public class DeleteBookController {
@@ -18,12 +19,14 @@ public class DeleteBookController {
 
 	@Autowired
 	private BooksService booksService;
+	private DeleteService deleteService;
 	
 	@RequestMapping(value = "/deleteBook", method = RequestMethod.POST)
 	public String deleteBook(Locale locale, int bookId, Model model) {
 		logger.info("Welcome DeleteBooks.java! The client locale is {}.", locale);
 		
 		booksService.deleteBook(bookId);
+		deleteService.newInsert(bookId);
 		
 		return "redirect:/home";
 	}

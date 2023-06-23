@@ -37,18 +37,19 @@ public class LoginController {
 	 * @param model
 	 * @return ホーム画面に遷移
 	 */
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.POST) //jspのform内の情報がここに飛ぶ
 	public String login(@RequestParam("email") String email, @RequestParam("password") String password, Model model) {
-
+		//("email"),("password")はimputタグのnameと関連づけている。それを引数として使う。
+		
 		// メアドとパスワードに一致するユーザー取得
 		UserInfo selectedUserInfo = usersService.selectUserInfo(email, password);
 
 		// ユーザーが存在すればログイン、存在しなければエラー(タスク２)
-		if (Objects.isNull(selectedUserInfo)) {
+		if (Objects.isNull(selectedUserInfo)) {//←staticメソッドだからインスタンス化が必要ない。引数がObjectだからObjectUtil。isEmptyでnull判断も可能。
 			model.addAttribute("errorMessage", "メールアドレスとパスワードが一致しません");
 			return "login";
 		} else {
-			return "redirect:/home";
+			return "redirect:/home";//redorect:homecontrollerのhomeのメソッドの処理を行ってから画面遷移
 		}
 	}
 }

@@ -41,23 +41,38 @@ public class AccountController {
 	 */
 
 	@Transactional
+	//↓処理を呼び出す
 	@RequestMapping(value = "/createAccount", method = RequestMethod.POST)
 	public String createAccount(Locale locale, @RequestParam("email") String email,
 			@RequestParam("password") String password, @RequestParam("passwordForCheck") String passwordForCheck,
+			@RequestParam("shelfPassword") String shelfPassword, @RequestParam("shelfPasswordForCheck") String shelfPasswordForCheck,
 			Model model) {
 		// デバッグ用ログ
 		logger.info("Welcome createAccount! The client locale is {}.", locale);
+		//logger=ログを出力する（作ってる）左のコンソールに出力される
 
 		// バリデーションチェック、パスワード一致チェック（タスク１）
 
-		if (password.length() >= 8 && password.matches("[0-9a-zA-Z]+")) {
+		if (password.length() >= 8 && password.matches("[0-9a-zA-Z]+$")) {
 			if (password.equals(passwordForCheck)) {
-				// パラメータで受け取ったアカウント情報をDtoに格納する。
-				UserInfo userInfo = new UserInfo();
-				userInfo.setEmail(email);
-				userInfo.setPassword(password);
-				usersService.registUser(userInfo);
-				return "redirect:/login";
+				if(shelfPassword.matches("[0-9]{4}")){
+					if (shelfPassword.equals(shelfPasswordForCheck)) {
+						// パラメータで受け取ったアカウント情報をDtoに格納する。
+						UserInfo userInfo = new UserInfo();
+						userInfo.setEmail(email);
+						userInfo.setPassword(password);
+						userInfo.setShelfPassword(shelfPassword);
+						usersService.registUser(userInfo);
+						return "redirect:/";
+					}else{
+					model.addAttribute("errorMessage", "パスワードが一致しません。");
+					return "createAccount";
+					}
+				}else {
+					model.addAttribute("errorMessage", "パスワードは4文字かつ半角数字に設定してください");
+					return "createAccount";
+				}
+	
 			} else {
 				model.addAttribute("errorMessage", "パスワードが一致しません。");
 				return "createAccount";

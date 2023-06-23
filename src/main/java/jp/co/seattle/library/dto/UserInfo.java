@@ -19,6 +19,10 @@ public class UserInfo {
 	private String password;
 
 	private String passwordCheck;
+	
+	private String shelfPassword;
+	
+	private String shelfPasswordForCheck;
 
 	public UserInfo() {
 
